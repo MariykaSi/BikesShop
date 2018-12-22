@@ -7,6 +7,17 @@ function createModel(loadProducts) {
     reducers: {
       setList(state, list) {
         state.list = list;
+      },
+      filterPriceFrom(state, payload) {
+        return (state.list = state.list.filter(
+          item => item.price >= Number(payload)
+        ));
+      },
+      filterPriceTo(state, payload) {
+        const newState = (state.list = state.list.filter(
+          item => item.price <= Number(payload)
+        ));
+        console.log(newState);
       }
     },
     effects: dispatch => ({

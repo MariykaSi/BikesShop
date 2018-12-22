@@ -36,19 +36,36 @@ class ProductsPage extends React.Component {
           title={getNameOfId(this.props.categories, this.props.match.params.id)}
         />
         <main>
-          {this.props.products.map(product => (
-            <Product
-              key={product.id}
-              id={product.id}
-              product={product}
-              removeProduct={this.props.removeProduct}
-              setQuantity={this.props.setQuantity}
-              category={categoryForProductSelector(
-                product,
-                this.props.categories
-              )}
-            />
-          ))}
+          <div className="filter">
+            <span>Price:</span>
+            <select onChange={e => this.props.filterPriceFrom(e.target.value)}>
+              <option>0</option>
+              <option>100</option>
+              <option>200</option>
+              <option>300</option>
+            </select>
+            <select onChange={e => this.props.filterPriceTo(e.target.value)}>
+              <option>0</option>
+              <option>100</option>
+              <option>200</option>
+              <option>300</option>
+            </select>
+          </div>
+          <div className="product-items">
+            {this.props.products.map(product => (
+              <Product
+                key={product.id}
+                id={product.id}
+                product={product}
+                removeProduct={this.props.removeProduct}
+                setQuantity={this.props.setQuantity}
+                category={categoryForProductSelector(
+                  product,
+                  this.props.categories
+                )}
+              />
+            ))}
+          </div>
         </main>
       </div>
     );
@@ -62,7 +79,9 @@ const mapState = state => ({
 
 const mapDispatch = ({ products, categories, productsInCart }) => ({
   loadAll: products.loadAll,
-  loadCategories: categories.loadCategories
+  loadCategories: categories.loadCategories,
+  filterPriceFrom: products.filterPriceFrom,
+  filterPriceTo: products.filterPriceTo
 });
 
 export default connect(

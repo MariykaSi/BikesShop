@@ -2,7 +2,7 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://MariykaSi.github.io/testShop",
+  "homepage": "http://MariykaSi.github.io/BikesShop",
   "dependencies": {
     "@rematch/core": "^1.0.6",
     "@rematch/immer": "^1.0.2",
@@ -31,12 +31,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "deploy": "gh-pages -d build",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.15.3",
-    "react-test-renderer": "^16.6.3",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "prettier": "^1.15.3",
+    "react-test-renderer": "^16.6.3"
   }
 }

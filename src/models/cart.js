@@ -39,7 +39,7 @@ const cart = {
         state.items = state.items.filter(item => item.product.id !== productId);
       } else {
         const item = state.items.find(item => item.product.id === productId);
-        item.quantity = quantity;
+        item.quantity = Number(quantity);
       }
     }
   }

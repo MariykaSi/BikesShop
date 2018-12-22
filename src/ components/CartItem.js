@@ -4,27 +4,21 @@ export default function CartItem({
   product,
   quantity,
   setQuantity,
-  removeProduct,
-  addOne,
-  removeOne
+  removeProduct
 }) {
   return (
-    <div>
-      {product.name}-{quantity}
-      <input
-        type="number"
-        value={quantity}
-        onChange={e => setQuantity(product.id, e.target.value)}
-      />
-      <button onClick={() => addOne(product.id, Number(quantity) + 1)}>
-        +1
-      </button>
-      <button onClick={() => removeOne(product.id, Number(quantity) - 1)}>
-        -1
-      </button>
-      <button onClick={() => removeProduct(product.id)}>
-        remove from cart
-      </button>
-    </div>
+    <article>
+      <img src={product.image} alt={product.name} />
+      <div className="details">
+        <p className="title">{product.name}</p>
+        <input
+          type="number"
+          value={quantity}
+          onChange={e => setQuantity(product.id, e.target.value)}
+        />
+        <p>1x {`€${product.price.toFixed(2)}`}</p>
+        <button onClick={() => removeProduct(product.id)}>remove</button>
+      </div>
+    </article>
   );
 }

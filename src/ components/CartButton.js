@@ -12,7 +12,7 @@ export function CartButton({ productsQuantity, totalPrice }) {
       <Link to="/cart">
         {" "}
         <img alt="" src={icon} />
-        <span>BASKET ({productsQuantity})</span>
+        <span>BASKET ({Number(productsQuantity)})</span>
       </Link>
     </div>
   );
