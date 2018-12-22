@@ -1,7 +1,7 @@
 {
   "main.css": "/BikesShop/static/css/main.4516dc29.chunk.css",
-  "main.js": "/BikesShop/static/js/main.b66fe2ad.chunk.js",
-  "main.js.map": "/BikesShop/static/js/main.b66fe2ad.chunk.js.map",
+  "main.js": "/BikesShop/static/js/main.52ce55eb.chunk.js",
+  "main.js.map": "/BikesShop/static/js/main.52ce55eb.chunk.js.map",
   "static/js/1.f302078e.chunk.js": "/BikesShop/static/js/1.f302078e.chunk.js",
   "static/js/1.f302078e.chunk.js.map": "/BikesShop/static/js/1.f302078e.chunk.js.map",
   "runtime~main.js": "/BikesShop/static/js/runtime~main.f975f038.js",
@@ -11,6 +11,6 @@
   "static/media/index.scss": "/BikesShop/static/media/bg.3bddb326.jpg",
   "static/media/icon-cart.png": "/BikesShop/static/media/icon-cart.3c5673b4.png",
   "index.html": "/BikesShop/index.html",
-  "precache-manifest.e50e1b1f04aad7f41670f3ba36df3351.js": "/BikesShop/precache-manifest.e50e1b1f04aad7f41670f3ba36df3351.js",
+  "precache-manifest.7cb8910a87aef3dc820385c6cb27876c.js": "/BikesShop/precache-manifest.7cb8910a87aef3dc820385c6cb27876c.js",
   "service-worker.js": "/BikesShop/service-worker.js"
 }

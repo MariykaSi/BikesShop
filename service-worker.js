@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/BikesShop/precache-manifest.e50e1b1f04aad7f41670f3ba36df3351.js"
+  "/BikesShop/precache-manifest.7cb8910a87aef3dc820385c6cb27876c.js"
 );
 
 workbox.clientsClaim();
