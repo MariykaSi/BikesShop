@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartButton renders correctly 1`] = `
+<div>
+  <a
+    href="/cart"
+    onClick={[Function]}
+  >
+    Cart 
+    5
+     products, price: 
+    100.10
+  </a>
+</div>
+`;

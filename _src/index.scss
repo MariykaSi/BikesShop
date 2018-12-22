@@ -1,0 +1,89 @@
+$font-family: 'Ubuntu', sans-serif;
+$text-center: center;
+$main-color: #000;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  color: $main-color;
+  a{
+    font-size: 18px;
+    text-decoration: none
+  }
+  header{
+  text-align: center;
+  background-image: url(/static/media/bg.jpg);
+  background-size: cover;
+  height: calc(100vh - 40px);
+  padding: 20px 10%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+    .header-container{
+      height: auto;
+      display: flex;
+      align-items: center;
+      .logo{
+        width: 20%;
+        text-align: left;
+        img{
+          height: 40px;
+          width: 150px;
+        }
+      }
+      nav{
+        width: 80%;
+        display:flex;
+        justify-content: center;
+        a{
+          margin: 0 17px;
+          text-transform: uppercase;
+          color: #fff;
+        }
+      } 
+    }
+    .title-text{
+      height: calc(100vh - 65px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p{
+        font-size: 60px;
+      }
+    }  
+  }
+  .products-page{
+    main{
+      display: flex;
+      max-width: 80%;
+      margin: 100px auto;
+      justify-content: space-between;
+    }
+    article{
+      width: 25%;
+      padding: 0 15px 15px;
+      img{
+        width: 100%
+      }
+      a{
+        color: #714f4e; 
+        font-size: 20px;
+      }
+      button{
+        background: #3c3c3c;
+        line-height: 40px;
+        width: 50%;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+

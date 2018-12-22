@@ -1,0 +1,134 @@
+$font-family: 'Ubuntu', sans-serif;
+$text-center: center;
+$main-color: #000;
+$title-color:#714f4e;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  color: $main-color;
+  a{
+    font-size: 18px;
+    text-decoration: none;
+  }
+  main{
+      display: flex;
+      max-width: 80%;
+      margin: 100px auto;
+      justify-content: space-between;
+  }
+  button{
+      background: #3c3c3c;
+      line-height: 40px;
+      width: 50%;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 5px;
+      cursor: pointer;
+  }
+  button:focus{
+      outline: none;
+  }
+  header{
+  text-align: center;
+  background-image: url(../src/img/bg.jpg);
+  background-size: cover;
+  height: calc(100vh - 40px);
+  padding: 20px 10%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+    .header-container{
+      height: auto;
+      display: flex;
+      align-items: center;
+      .logo{
+        width: 20%;
+        text-align: left;
+        img{
+          height: 40px;
+          width: 150px;
+        }
+      }
+      nav{
+        width: 60%;
+        display:flex;
+        justify-content: center;
+        a{
+          margin: 0 17px;
+          text-transform: uppercase;
+          color: #fff;
+        }
+      } 
+      .cart-button{
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        a{
+          font-size: 16px;
+          color: #fff;
+          display: flex;
+          align-items: center;
+        }
+        img{
+          margin-right: 10px;
+        }
+      }
+    }
+    .title-text{
+      height: calc(100vh - 65px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p{
+        font-size: 60px;
+      }
+    }  
+  }
+  .products-page{
+    article{
+      width: 25%;
+      padding: 0 15px 15px;
+      img{
+        width: 100%
+      }
+      p.title{
+        color: #714f4e; 
+        font-size: 20px;
+      }
+    }
+  }
+  .product{
+    display: flex;
+    .product-img{
+      width: 65%
+    }
+    .product-discription{
+      width: 35%;
+      h1{
+        color: $title-color;
+        margin: 10px 0;
+      }
+      p{
+        max-width: 80%;
+        color: #5c5a5b;
+      }
+      h2{
+        font-size: 16px;
+        font-weight: normal;
+        font-style: italic;
+        margin: 5px 0;
+      }
+      .price{
+        font-size: 28px;
+        letter-spacing: -0.025rem;
+      }
+    }
+  }
+}
+
+
+

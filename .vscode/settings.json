@@ -1,0 +1,9 @@
+{
+  "javascript.format.enable": false,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "eslint.autoFixOnSave": true,
+  "editor.tabSize": 2,
+  "window.zoomLevel": 0
+}
