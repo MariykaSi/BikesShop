@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
-import CategoriesPage from "./pages/CategoriesPage";
+import HomePage from "./pages/HomePage";
 
 class App extends Component {
   render() {
@@ -22,8 +22,8 @@ class App extends Component {
               <Route path="/products" component={ProductsPage} />
 
               <Route path="/categories/:id" component={ProductsPage} />
-
-              <Route path="/" component={CategoriesPage} />
+              <Route path="/categories" component={HomePage} />
+              <Route path="/" component={HomePage} />
             </Switch>
           </Router>
         </Provider>

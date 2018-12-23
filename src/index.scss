@@ -128,7 +128,10 @@ body {
   .product{
     display: flex;
     .product-img{
-      width: 65%
+      width: 65%;
+      img{
+        width: 100%;
+      }
     }
     .product-discription{
       width: 35%;
