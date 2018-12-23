@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/BikesShop/static/js/runtime~main.f975f038.js"
   },
   {
-    "revision": "52ce55eb6773732d599c",
-    "url": "/BikesShop/static/js/main.52ce55eb.chunk.js"
+    "revision": "c182b1cce5df1e44f650",
+    "url": "/BikesShop/static/js/main.c182b1cc.chunk.js"
   },
   {
-    "revision": "f302078ef3c2012f7933",
-    "url": "/BikesShop/static/js/1.f302078e.chunk.js"
+    "revision": "a29063e98d0715dc9f7b",
+    "url": "/BikesShop/static/js/1.a29063e9.chunk.js"
   },
   {
-    "revision": "52ce55eb6773732d599c",
-    "url": "/BikesShop/static/css/main.4516dc29.chunk.css"
+    "revision": "c182b1cce5df1e44f650",
+    "url": "/BikesShop/static/css/main.9cd820ba.chunk.css"
   },
   {
-    "revision": "47757a6d96a8873b6b682fd5e95d7fcd",
+    "revision": "96573b2e51c60ddcbeb190d305c562b8",
     "url": "/BikesShop/index.html"
   }
 ];
