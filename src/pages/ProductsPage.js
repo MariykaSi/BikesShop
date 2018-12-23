@@ -47,15 +47,29 @@ class ProductsPage extends React.Component {
         <main>
           <div className="filter">
             <span>Price:</span>
-            <select onChange={e => filterPriceFrom(e.target.value)}>
-              {filterParametrsPrice.map((parametr, i) => (
-                <option key={i}>{parametr}</option>
-              ))}
+            <select
+              value={filterValue.priceFrom}
+              onChange={e => filterPriceFrom(e.target.value)}
+            >
+              {filterParametrsPrice.map((parametr, i) =>
+                parametr === 0 ? (
+                  <option key={i}>{parametr}</option>
+                ) : (
+                  <option key={i}>{parametr}</option>
+                )
+              )}
             </select>
-            <select onChange={e => filterPriceTo(e.target.value)}>
-              {filterParametrsPrice.map((parametr, i) => (
-                <option key={i}>{parametr}</option>
-              ))}
+            <select
+              value={filterValue.priceTo}
+              onChange={e => filterPriceTo(e.target.value)}
+            >
+              {filterParametrsPrice.map((parametr, i) =>
+                parametr === 1000 ? (
+                  <option key={i}>{parametr}</option>
+                ) : (
+                  <option key={i}>{parametr}</option>
+                )
+              )}
             </select>
           </div>
           <div className="product-items">
