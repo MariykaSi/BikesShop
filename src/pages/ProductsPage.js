@@ -7,6 +7,8 @@ import Header from "../ components/Header";
 import categoryForProductSelector from "../selectors/categoryForProductSelector";
 import getNameOfId from "../selectors/getNameOfId";
 
+const filterParametrsPrice = [0, 100, 200, 300, 400, 500, 600, 1000];
+
 class ProductsPage extends React.Component {
   componentDidMount() {
     this.loadData(this.props);
@@ -30,41 +32,48 @@ class ProductsPage extends React.Component {
   }
 
   render() {
+    const {
+      categories,
+      filterPriceFrom,
+      filterPriceTo,
+      filterValue,
+      removeProduct,
+      setQuantity,
+      match
+    } = this.props;
     return (
       <div className="products-page">
-        <Header
-          title={getNameOfId(this.props.categories, this.props.match.params.id)}
-        />
+        <Header title={getNameOfId(categories, match.params.id)} />
         <main>
           <div className="filter">
             <span>Price:</span>
-            <select onChange={e => this.props.filterPriceFrom(e.target.value)}>
-              <option>0</option>
-              <option>100</option>
-              <option>200</option>
-              <option>300</option>
+            <select onChange={e => filterPriceFrom(e.target.value)}>
+              {filterParametrsPrice.map((parametr, i) => (
+                <option key={i}>{parametr}</option>
+              ))}
             </select>
-            <select onChange={e => this.props.filterPriceTo(e.target.value)}>
-              <option>0</option>
-              <option>100</option>
-              <option>200</option>
-              <option>300</option>
+            <select onChange={e => filterPriceTo(e.target.value)}>
+              {filterParametrsPrice.map((parametr, i) => (
+                <option key={i}>{parametr}</option>
+              ))}
             </select>
           </div>
           <div className="product-items">
-            {this.props.products.map(product => (
-              <Product
-                key={product.id}
-                id={product.id}
-                product={product}
-                removeProduct={this.props.removeProduct}
-                setQuantity={this.props.setQuantity}
-                category={categoryForProductSelector(
-                  product,
-                  this.props.categories
-                )}
-              />
-            ))}
+            {this.props.products.map(product =>
+              product.price >= filterValue.priceFrom &&
+              product.price <= filterValue.priceTo ? (
+                <Product
+                  key={product.id}
+                  id={product.id}
+                  product={product}
+                  removeProduct={removeProduct}
+                  setQuantity={setQuantity}
+                  category={categoryForProductSelector(product, categories)}
+                />
+              ) : (
+                <div key={product.id} />
+              )
+            )}
           </div>
         </main>
       </div>
@@ -74,14 +83,15 @@ class ProductsPage extends React.Component {
 
 const mapState = state => ({
   products: state.products.list,
-  categories: state.categories.list
+  categories: state.categories.list,
+  filterValue: state.filterValue
 });
 
-const mapDispatch = ({ products, categories, productsInCart }) => ({
+const mapDispatch = ({ products, categories, filterValue }) => ({
   loadAll: products.loadAll,
   loadCategories: categories.loadCategories,
-  filterPriceFrom: products.filterPriceFrom,
-  filterPriceTo: products.filterPriceTo
+  filterPriceFrom: filterValue.filterPriceFrom,
+  filterPriceTo: filterValue.filterPriceTo
 });
 
 export default connect(
